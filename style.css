@@ -222,6 +222,7 @@ background-color: rgb(211, 209, 209);
 grid-area: main;
 padding: 20px 40px 40px 20px;
 display: grid;
+grid-row-gap: 20px;
 grid: 
 [start1] "projects announcements" 5fr[end1]
 [start2] "projects trending" 5fr[end2]
@@ -241,6 +242,42 @@ grid:
     grid-column: 1/3;
     font-weight: bold;
     margin-left: 5px;
+    margin-top: 12px;
+}
+
+.projects > div {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0px 10px 0px 20px;
+    border-left: 10px solid rgb(233, 198, 1);
+    display: grid;
+}
+
+.projects > div p{
+    margin: 0;
+}
+
+.projects > div > p:first-of-type {
+    align-self: self-end;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.projects > div > p:last-of-type {
+    align-self: self-start;
+}
+
+.projects > div > div {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    align-items: center;
+}
+
+.projects img {
+    margin: 0px 10px;
+    margin-bottom: 10px;
 }
 
 .announcements {
@@ -254,28 +291,35 @@ grid-auto-flow: row;
     font-weight: bold;
     margin-left: 5px;
     align-self: center;
+    margin-top: 12px;
 }
 
 .announcements > div {
     background-color: white;
     margin-left: 20px;
     border-radius: 10px;
+    margin-top: 10px;
 
 }
 
 .trending {
-
+display: grid;
+grid-template: 1fr 6fr / 1fr;
 }
 
 .trendingText {
     grid-column: 1/3;
     font-weight: bold;
     margin-left: 5px;
+    margin-top: 12px;
+
 }
 
-.projects > div {
+.trending > div {
     background-color: white;
     border-radius: 10px;
-    margin: 10px;
-    border-left: 10px solid rgb(233, 198, 1);
+    margin-bottom: 10px;
+    margin-left: 20px;
+
 }
+
