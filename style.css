@@ -360,11 +360,11 @@ grid-auto-flow: row;
     margin-left: 15px;
 }
 
-.trending p:first-of-type {
+.trending >div  p:first-of-type {
     align-self: self-end;
 }
 
-.trending p:last-of-type {
+.trending >div  p:last-of-type {
     align-self: self-start;
     font-size: 0.85rem;
     color: rgb(75, 75, 75);
