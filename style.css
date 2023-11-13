@@ -295,6 +295,30 @@ grid-auto-flow: row;
 }
 
 .announcements > div {
+    display: grid;
+    align-items: center;
+}
+.announcements > div p{
+    margin: 0;
+}
+
+.announcements >div >div {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 0px 10px 0px 10px;
+}
+.announcements > div > div > p:first-of-type {
+    align-self: self-end;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.announcements > div >div>  p:last-of-type {
+    align-self: self-start;
+    font-size: 75%;
+}
+
+.announcements > div {
     background-color: white;
     margin-left: 20px;
     border-radius: 10px;
