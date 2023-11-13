@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin:2.5% 0px;
+    background-color: black;
+    display: grid;
+    font-family: 'Roboto';}
+
+.sidebar p,
+.siderbar div {
+    min-height: 0px;
+    margin: 0px;
+}
+.pageLayout {
+    justify-content: center;
+    margin: 0 auto;
+    height: 90vh;
+    /* width: 90vw; */
+    width: 1400px;
+    display: grid;
+    grid:
+    [start1]"sidebar navbar" 1.5fr[end1]
+    [start2]"sidebar header" 2.5fr[end2]
+    [start3]"sidebar main" 12fr [end3]
+/ 1fr 4fr;
+}
+
+.sidebar{
+background-color: rgb(3, 98, 240);
+grid-area: sidebar;
+display: grid;
+grid-template-rows: repeat(14,1fr);
+grid-template-columns: 2fr 3fr;
+color: white;
+font-weight: bold;
+}
+
+.sidebar > div {
+    grid-column: span 2;
+    display: grid;
+    margin: 0px;
+
+
+}
+
+.sidebar > div >div {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: start;
+    margin: 0px;
+}
+
+.sidebar div div:hover {
+    transform: scale(1.15) translateX(10px);
+    transition: transform 1.5s;
+    cursor: grab;
+}
+
+.sidebar div > img {
+    justify-self: center;
+    margin: 0px;
+    filter: brightness(0) invert(1);
+    margin-left: 10px ;
+
+
+}
+.sidebar > div >div >  p {
+    margin-left: 10px;
+}
+
+.sidebarHeader {
+    grid-row: 1/2;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.sidebarMain {
+    grid-row: 3 / 7;
+    grid-template-rows: repeat(6,1fr);
+}
+.sidebarSettings {
+    grid-row: 8 / 10;
+    grid-template-rows: repeat(3,1fr);
+
+}
+
+.navbar {
+background-color: green;
+grid-area: navbar;
+display: grid;
+grid-template-columns: 7fr 3fr;
+}
+
+.searchbar {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.searchbar input {
+justify-self:stretch;
+height: 30px;
+border-radius: 10px;
+border: 0px;
+background-color: lightgrey;
+order: 1;
+font-size: 1rem;
+text-align: center;
+}
+
+.searchbar div {
+    order: 2
+}
+
+.searchbar input:focus:not(placeholder-shown) ~ img {
+    transform: scale(1.25);
+    transition: transform 1s;
+}
+
+.searchbar input:focus:not(:placeholder-shown) ~ img:hover {
+    cursor: grab;
+}
+
+.header {
+background-color: grey;
+grid-area: header;
+}
+.main {
+background-color: brown;
+grid-area: main;
+}
