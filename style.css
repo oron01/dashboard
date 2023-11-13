@@ -116,7 +116,7 @@ text-align: center;
     order: 2
 }
 
-.searchbar input:focus:not(placeholder-shown) ~ img {
+.searchbar input:focus:not(:placeholder-shown) ~ img {
     transform: scale(1.25);
     transition: transform 1s;
 }
