@@ -20,7 +20,7 @@ body {
     display: grid;
     grid:
     [start1]"sidebar navbar" 1.5fr[end1]
-    [start2]"sidebar header" 2.5fr[end2]
+    [start2]"sidebar header" 1.75fr[end2]
     [start3]"sidebar main" 12fr [end3]
 / 1fr 4fr;
 }
@@ -87,7 +87,7 @@ font-weight: bold;
 }
 
 .navbar {
-background-color: green;
+background-color: rgb(249, 252, 249);
 grid-area: navbar;
 display: grid;
 grid-template-columns: 7fr 3fr;
@@ -106,7 +106,7 @@ justify-self:stretch;
 height: 30px;
 border-radius: 10px;
 border: 0px;
-background-color: lightgrey;
+background-color: rgb(211, 209, 209);
 order: 1;
 font-size: 1rem;
 text-align: center;
@@ -117,7 +117,7 @@ text-align: center;
 }
 
 .searchbar input:focus:not(:placeholder-shown) ~ img {
-    transform: scale(1.25);
+    transform: scale(1.5);
     transition: transform 1s;
 }
 
@@ -125,10 +125,98 @@ text-align: center;
     cursor: grab;
 }
 
-.header {
-background-color: grey;
-grid-area: header;
+.navButtons {
+    /* grid-template-columns: repeat(7,1fr); */
+    display: grid;
+    grid-auto-flow: column;
+    grid: 1fr
+    / 1fr 1fr 2.5fr 1fr;
+    align-items: center;
+    justify-items: center;
 }
+
+.navButtons img {
+    height: 35px;
+    width: 35px;
+}
+
+.navButtons img:first-of-type {
+    /* grid-area: notifications; */
+}
+
+.navButtons img:last-of-type {
+    /* grid-area: pfp; */
+}
+.navButtons p {
+    /* grid-area: name; */
+    font-weight: bold;
+}
+
+.navButtons > *:hover {
+        transform: scale(1.15);
+        transition: transform 1.5s;
+        cursor: grab;
+    }
+
+.navButtons p:hover {
+        transform: rotate(360deg);
+        transition: transform 1s;
+        cursor: grab;
+    }
+
+.header {
+/* background-color: grey; */
+background-color: white;
+grid-area: header;
+display: grid;
+grid-template-columns: 0.5fr 6fr 2.5fr 4fr 0.5fr ;
+}
+
+.greeting {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 5fr;
+    align-items: center;
+    justify-items: center;
+    column-gap: 15px;
+
+}
+
+.greetingPfp {
+    grid-row: span 2;
+    height: 75px;
+    width: 75px;
+}
+
+.greeting p:first-of-type {
+    align-self:self-end ;
+    margin: 0; 
+    justify-self: left;
+}
+.greeting p:last-child {
+    align-self: self-start;
+    margin: 0;
+    justify-self: left;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.headerButtons {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.headerButtons > div {
+    padding: 12.5px 20px;
+    border-radius: 20px;
+    background-color: rgb(3, 98, 240);
+    text-align: center;
+    cursor: grab;
+}
+
 .main {
 background-color: brown;
 grid-area: main;
